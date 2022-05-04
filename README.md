@@ -13,7 +13,10 @@
   
 ## Technologies used
   Python
-  
+  JavaScript
+  HTML
+  C
+  CSS
 ## Contact Information
 Feel free to call me or email me with respective contacts detail:
   * Mobile number --+254742051755
