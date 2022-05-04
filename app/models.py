@@ -3,40 +3,53 @@ class News:
     '''
     News class to define News objects
     '''
-    def __init__(self, title, content, author, date):
+    def __init__(self,id,title,description,url,urlToImage,publishedAt,content):
+        self.id = id
         self.title = title
+        self.description = description
+        self.url = url
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
         self.content = content
-        self.author = author
-        self.date = date
+        
+class Reviews:
+    '''
+    Reviews class to define Reviews objects
+    '''
 
-class Review:
-
-    all reviews = []
-
-    def __init__(self, title, content, author, date,review):
-        self.title = title
+    def __init__(self,id,name,description,url,urlToImage,publishedAt,content,review):
+        self.id = id
+        self.name = name
+        self.description = description
+        self.url = url
+        self.urlToImage = urlToImage
+        self.publishedAt = publishedAt
         self.content = content
-        self.author = author
-        self.date = date
         self.review = review
-
+    
     def save_review(self):
-        Review.all_reviews.append(self)
+        '''
+        Function to save reviews
+        '''
+        Reviews.all_reviews.append(self)
 
     @classmethod
     def clear_reviews(cls):
-        Review.all_reviews.clear()
+        '''
+        Function to clear reviews
+        '''
+        Reviews.all_reviews.clear()
 
     @classmethod
-    def get_reviews(cls, id):
-            
-            response = []
+    def get_reviews(cls,id):
+        
+        response = []
+
+        for review in cls.all_reviews:
+            if review.id == id:
+                response.append(review)
+        return response
+
+
+
     
-            for review in cls.all_reviews:
-                if review.id == id:
-                    response.append(review)
-    
-            return response
-
-
-
