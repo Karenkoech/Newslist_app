@@ -32,7 +32,7 @@ def news(id):
     View news page function that returns the news details page and its data
     '''
     news = get_news(id)
-    title = f'{id}'
+    title = f'{news.id}'
 
     search_news = request.args.get('news_query')
 
