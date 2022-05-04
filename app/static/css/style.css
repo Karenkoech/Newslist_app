@@ -1,0 +1,25 @@
+.publishing{
+    background-color: #c79494;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 15%;
+}
+.content{
+    padding: 10px;
+    font-size:12px
+    
+}
+.row-fluid{
+    font-size: 14px;
+    margin-bottom: 5px;
+
+} 
+ .news_item{
+    margin-bottom: 10px;
+
+} 
+.news-card{
+    margin-bottom: 10px;
+
+}
